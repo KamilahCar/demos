@@ -1,0 +1,5 @@
+<div class="card-group mt-4">
+  <ul *ngFor="let reimbursement of reimbursements$ | async">
+    <app-reimbursement-detail [data]="reimbursement" [user]="currentUser$ | async" ></app-reimbursement-detail>
+  </ul>
+</div>

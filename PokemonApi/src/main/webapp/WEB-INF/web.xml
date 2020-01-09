@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	version="2.5">
+	<display-name>PokemonApi</display-name>
+	
+	<context-param>
+		<param-name>To</param-name>
+		<param-value>Go</param-value>
+	</context-param>
+
+	<servlet>
+		<servlet-name>OurFirstServlet</servlet-name>
+		<servlet-class>com.revature.servlets.FirstServlet</servlet-class>
+		<init-param>
+			<param-name>Poto</param-name>
+			<param-value>Baked</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet>
+		<servlet-name>PokemonServlet</servlet-name>
+		<servlet-class>com.revature.servlets.PokemonServlet</servlet-class>
+	</servlet>
+
+
+	<servlet>
+		<servlet-name>UserServlet</servlet-name>
+		<servlet-class>com.revature.servlets.UserServlet</servlet-class>
+	</servlet>
+
+	<servlet>
+		<servlet-name>AuthServlet</servlet-name>
+		<servlet-class>com.revature.servlets.AuthServlet</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>OurFirstServlet</servlet-name>
+		<url-pattern>/first</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>PokemonServlet</servlet-name>
+		<url-pattern>/pokemon/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>UserServlet</servlet-name>
+		<url-pattern>/users/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>AuthServlet</servlet-name>
+		<url-pattern>/auth/*</url-pattern>
+	</servlet-mapping>
+	
+	
+
+</web-app>
